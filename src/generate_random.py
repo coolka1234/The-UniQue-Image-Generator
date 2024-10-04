@@ -3,14 +3,16 @@ import json
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 raw_data = {
     "jsonrpc": "2.0",
     "method": "generateIntegers", #ints
     "params": {
         "apiKey": os.getenv('RANDOM_API_KEY'),
-        "n": 6, # number of random integers
+        "n": 600, # number of random integers
         "min": 1, # minimum value
-        "max": 6, # maximum value
+        "max": 1299, # maximum value
         "replacement": True # allow duplicates
     },
     'id':1
@@ -25,4 +27,6 @@ response = requests.post(
     headers=headers
     )
 
-print(response.text)
+json_response = response.json()
+python_response = json_response['result']['random']['data']
+print(python_response)
