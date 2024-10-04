@@ -1,11 +1,13 @@
 import requests
 import json
+from dotenv import load_dotenv
+import os
 
 raw_data = {
     "jsonrpc": "2.0",
     "method": "generateIntegers", #ints
     "params": {
-        "apiKey": "your-api-key",
+        "apiKey": os.getenv('RANDOM_API_KEY'),
         "n": 6, # number of random integers
         "min": 1, # minimum value
         "max": 6, # maximum value
