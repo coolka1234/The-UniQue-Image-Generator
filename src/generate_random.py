@@ -3,7 +3,6 @@ import json
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
 
 
 # json_response = response.json()
@@ -11,6 +10,7 @@ load_dotenv()
 # print(python_response)
 
 def generate_random(number_of_random_integers, minimum_value, maximum_value, duplicates_allowed):
+    load_dotenv()
     raw_data = {
     "jsonrpc": "2.0",
     "method": "generateIntegers", #ints
