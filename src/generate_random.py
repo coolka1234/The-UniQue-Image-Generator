@@ -22,7 +22,7 @@ def generate_random(number_of_random_integers, minimum_value, maximum_value, dup
         "replacement": duplicates_allowed # allow duplicates
     },
     'id':1
-}
+    }
 
     headers = {'Content-type': 'application/json','Content-Length': '200', 'Accept': 'application/json'}
     data=json.dumps(raw_data)
@@ -35,3 +35,6 @@ def generate_random(number_of_random_integers, minimum_value, maximum_value, dup
     json_response = response.json()
     python_response = json_response['result']['random']['data']
     return python_response
+
+if __name__ == '__main__':
+    print(generate_random(10, 1, 100, True))
