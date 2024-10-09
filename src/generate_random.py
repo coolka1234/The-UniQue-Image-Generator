@@ -5,9 +5,6 @@ import os
 
 
 
-# json_response = response.json()
-# python_response = json_response['result']['random']['data']
-# print(python_response)
 
 def generate_random(number_of_random_integers, minimum_value, maximum_value, duplicates_allowed):
     load_dotenv()
