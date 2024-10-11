@@ -4,8 +4,6 @@ from generate_random import generate_random
 
 
 random_data = generate_random(100, 0, 10, True) 
-# print(random_data)
-# random_data = np.array(random_data) / 1000
 print(random_data)
 
 fig, ax = plt.subplots(figsize=(6,6))
