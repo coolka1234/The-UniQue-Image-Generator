@@ -24,5 +24,6 @@ for i in range(0, 100, 2):
 
 ax.set_xlim(0, 100)
 ax.set_ylim(0, 100)
+ax.axis('off')
 plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
